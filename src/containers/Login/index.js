@@ -1,24 +1,30 @@
 import './index.css';
 import { useState } from'react';
+import { Button, Input, Form, Dialog} from 'antd-mobile'
 
 const Login = () => {
-    const [name, setName] = useState(''); // hooks
-    const [password, setPassword] = useState('');
+    const [form] = Form.useForm() // hooks获取当前表单
+    const onSubmit = () => {
+        const values = form.getFieldsValue()
+        Dialog.alert({
+            content: <pre>{JSON.stringify(values, null, 2)}</pre>,
+        })
+    }
 
-    const clickHandler = () => {
-        alert("success: " + name + "," + password);
-    }
-    const onChangeName = (e) => {
-        setName(e.target.value);
-    }
-    const onChangePwd = (e) => {
-        setPassword(e.target.value);
-    }
     return (
         <div className="login">
-            <div>username: <input onChange={onChangeName}/></div>
-            <div>password: <input type = "password" onChange={onChangePwd} /></div>
-            <div><button onClick={clickHandler}>log in</button></div>
+            <Form form = {form} layout='horizontal' mode='card'
+                footer={
+                    <Button color="primary" onClick={onSubmit}>log in</Button>
+                }
+            >
+                <Form.Item label='username' name='username'>
+                    <Input placeholder='please enter username' clearable />
+                </Form.Item>
+                <Form.Item label='password' name='password'>
+                    <Input placeholder='please enter password' clearable type='password'/>
+                </Form.Item>
+            </Form>
         </div>
     );
 }
