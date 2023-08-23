@@ -1,0 +1,16 @@
+{
+    "user": [
+        {
+            "username": "xcns",
+            "password": "1234",
+            "age": "23",
+            "address": "LA"
+        },
+        {
+            "username": "admin",
+            "password": "12343",
+            "age": "28",
+            "address": "LA"
+        }
+]
+}
