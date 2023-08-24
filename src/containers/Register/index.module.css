@@ -1,0 +1,53 @@
+.header {
+  height: 50px;
+  text-align: center;
+  background-color: #ccc;
+}
+
+.closeIcon {
+    position: absolute;
+    top: 25px;
+    left: 18px;
+    font-size: 16px;
+}
+
+.twitterLogo {
+    height: 30px;
+    margin-top: 10px;
+}
+
+.form {
+  margin: 0 30px;
+}
+
+.formTitle {
+  font-size: 25px;
+  font-weight: 700;
+  height: 68px;
+  line-height: 68px;
+}
+
+.input {
+  border: solid 1px #cfd9de;
+  border-radius: 5px;
+  height: 53px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.changeTypebutton{
+  color: #1d9bf0;
+}
+
+.dobTitle {
+  font-size: 16px;
+  color: #000;
+  margin-top: 25px;
+  font-weight: 700;
+}
+
+.dobInput {
+  composes: input;
+  margin-top: 10px;
+}
